@@ -1,4 +1,4 @@
-print("test print")
+#print("test print")
 
 # Add our dependencies.
 import csv
@@ -51,40 +51,55 @@ with open(file_to_load) as election_data:
         # Tracking candidate vote counts
         candidate_votes[candidate_name] += 1
 
-# print the total votes
+with open(file_to_save, "w") as txt_file:
+    election_results = (f"\nElection Results\n-------------------------\nTotal Votes: {total_votes}\n-------------------------\n")
+    print(election_results, end="")
+    # Save the final vote count in the text file.
+    txt_file.write(election_results)
 
-print(total_votes)
+    # print the total votes
 
-# Print the candidate list.
-print(candidate_options)
-print(candidate_votes)
+    #print(total_votes)
+
+    # Print the candidate list.
+    #print(candidate_options)
+    #print(candidate_votes)
 
 
-# Percentage of votes for each candidate
-# Going through the list
-for candidate_name in candidate_votes:
-    # Making a variable for candidate votes
-    votes = candidate_votes[candidate_name]
-    # Doing the math
-    vote_percentage = float(votes) / float(total_votes) * 100
-    
-    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes})\n")
+    # Percentage of votes for each candidate
+    # Going through the list
+    for candidate_name in candidate_votes:
+        # Making a variable for candidate votes
+        votes = candidate_votes[candidate_name]
+        # Doing the math
+        vote_percentage = float(votes) / float(total_votes) * 100
+        
+        #capture candidate results for printing
+        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes})\n")
 
-    # Evaluating to see if they're the winner
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
+        #print candidate results
+        print(candidate_results)
+        txt_file.write(candidate_results)
 
-        # As it goes through, it will reassign the highest total to these variables
-        winning_count = votes
-        winning_percentage = vote_percentage
-        # And reassign the winning candidate
-        winning_candidate = candidate_name
+        # Evaluating to see if they're the winner
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
 
-# print out the winning candidate name, vote count, and percentage
-winning_candidate_summary = (
-    f"-------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning Vote Count: {winning_count:,}\n"
-    f"Winning Percentage: {winning_percentage:.1f}%\n"
-    f"-------------------------\n")
+            # As it goes through, it will reassign the highest total to these variables
+            winning_count = votes
+            winning_percentage = vote_percentage
+            # And reassign the winning candidate
+            winning_candidate = candidate_name
 
-print(winning_candidate_summary)
+    # print out the winning candidate name, vote count, and percentage
+    winning_candidate_summary = (
+        f"-------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"-------------------------\n")    
+    print(winning_candidate_summary)
+
+    # Save it to the text file
+    txt_file.write(winning_candidate_summary)
+
+
