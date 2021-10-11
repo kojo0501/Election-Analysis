@@ -15,5 +15,19 @@ A Colorado Board of Elections employee has given you the following tasts to comp
 
 ## Summary
 The analysis of the election show that:
+  •	There were 369711 votes cast in the election.
+  •	The candidates were:
+      o	Charles Casper Stockham
+      o	Diana DeGette
+      o	Raymon Anthony Doane
+  •	The candidate results were:
+      o	Charles Casper Stockham received 23.0% of the vote and 85213 number of votes.
+      o	Diana DeGette received 73.8% of the vote and 272892 number of votes.
+      o	Raymon Anthony Doane received 3.1% of the vote and 11606 number of votes.
+  •	The winner of the election was:
+      o	Diana DeGette, who received 73.8% of the vote and 272892 number of votes.
 
-There were 369711 votes cast in the election
+## Challenge Overview
+
+## Challenge Summary
+
