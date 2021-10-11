@@ -11,7 +11,7 @@ A Colorado Board of Elections employee has given you the following tasts to comp
 
 ## Resources
 •	Data Source: election_results.csv
-•	Software: Python 3.7.6, Visual Studio Code, 1.61.0
+• Software: Python 3.7.6, Visual Studio Code, 1.61.0
 
 ## Summary
 The analysis of the election show that:
