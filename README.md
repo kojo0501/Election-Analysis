@@ -10,7 +10,7 @@ A Colorado Board of Elections employee has given you the following tasts to comp
 5. Determine the winner of the election based on popular votes.
 
 ## Resources
-•	Data Source: election_results.csv
+•	Data Source: election_results.csv <br>
 • Software: Python 3.7.6, Visual Studio Code, 1.61.0
 
 ## Summary
