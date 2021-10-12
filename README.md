@@ -44,11 +44,11 @@ The code is written to evaluate any election. By using lists and loops, the code
 <br>
 <br>
 <br>
-If a future CSV included a 4th column with party affiliation, the code could be updated to include that by integrating a list to hold the party affiliation. The party affiliation would be updated at this point in the code:
+If a future CSV included a 4th column with party affiliation, the code could be updated to include that data by integrating a list to hold the party affiliation. The party affiliation written to the list variable at this point in the code:
 
 ![party affiliation](https://user-images.githubusercontent.com/24308495/136894622-6170f344-e153-484c-92e8-4fc54f788956.PNG)
 
-The affiliation could be included to the candidate_votes dictionary variable, along with the candidate name, so that it could be referenced in the text document.
+The affiliation could be included in the candidate_votes dictionary variable, along with the candidate name, so that it could be referenced in the text document.
 <br>
 <br>
 <br>
